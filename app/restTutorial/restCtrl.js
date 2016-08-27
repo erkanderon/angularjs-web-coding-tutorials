@@ -16,10 +16,16 @@ angular.module('restTutorial', ['ngRoute'])
     .controller('restCtrl', ['$scope','$http',function($scope, $http) {
 
 
-        $http.get('http://rest-service.guides.spring.io/greeting').
+        $http.get('http://localhost:3000/listusers').
             success(function(data) {
                 $scope.greeting = data;
             });
+
+        var dados = {user7:{name:'test'}};
+
+        $http.post('http://127.0.0.1:3000/listusers/', dados)
+            .then(function() {console.log('success');})   // success
+            .catch(function() {console.log('error');});
 
     }
 

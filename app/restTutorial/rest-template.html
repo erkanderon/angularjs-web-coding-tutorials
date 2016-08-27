@@ -1,7 +1,10 @@
-<p>Rest partial</p>
+<h3>Rest partial</h3>
 
 
-<div ng-controller="restCtrl">
-    <p>The ID is {{greeting.id}}</p>
-    <p>The content is {{greeting.content}}</p>
+<div ng-controller="restCtrl" ng-repeat="user in greeting">
+	<hr>
+    <p>Name: {{user.name}}</p>
+    <p>Password: {{user.password}}</p>
+    <p>Profession: {{user.profession}}</p>
+    <p>ID: {{user.id}}</p>
 </div>
