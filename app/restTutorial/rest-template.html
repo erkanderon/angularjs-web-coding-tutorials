@@ -8,3 +8,46 @@
     <p>Profession: {{user.profession}}</p>
     <p>ID: {{user.id}}</p>
 </div>
+
+<hr>
+<div class="container">
+    <div class="col-md-6 col-md-offset-3">
+
+  <!-- PAGE TITLE -->
+        <div class="page-header">
+              <h1><span class="glyphicon glyphicon-tower"></span> Submitting Forms with Angular</h1>
+        </div>
+
+  <!-- SHOW ERROR/SUCCESS MESSAGES -->
+        <div id="messages"></div>
+
+  <!-- FORM -->
+  <form ng-submit="postData()">
+    <!-- NAME -->
+    <div id="name-group" class="form-group">
+      <label>Name</label>
+      <input type="text" name="name" ng-model='name' class="form-control" placeholder="Bruce Wayne">
+      <span class="help-block"></span>
+    </div>
+
+    <!-- SUPERHERO NAME -->
+    <div id="superhero-group" class="form-group">
+      <label>Superhero Alias</label>
+      <input type="text" name="superheroAlias" ng-model='superheroAlias' class="form-control" placeholder="Caped Crusader">
+      <span class="help-block"></span>
+    </div>
+
+    <div id="superhero-group" class="form-group">
+      <label>Superhero Id</label>
+      <input type="text" name="superheroid" ng-model='superheroid' class="form-control" placeholder="id">
+      <span class="help-block"></span>
+    </div>
+
+    <!-- SUBMIT BUTTON -->
+    <button type="submit" class="btn btn-success btn-lg btn-block">
+      <span class="glyphicon glyphicon-flash"></span> Submit!
+    </button>
+  </form>
+
+</div>
+</div>

@@ -21,11 +21,27 @@ angular.module('restTutorial', ['ngRoute'])
                 $scope.greeting = data;
             });
 
-        var dados = {user7:{name:'test'}};
+        
 
-        $http.post('http://127.0.0.1:3000/listusers/', dados)
+
+        $scope.postData = function(){
+
+
+            //$scope.name='';
+            //$scope.superheroAlias = '';
+            var dados = {};
+            console.log($scope.name);
+            console.log($scope.superheroAlias);
+            console.log('user'+ $scope.superheroid);
+            dados['user'+ $scope.superheroid] = {};
+            dados['user'+ $scope.superheroid]['name'] = $scope.name;
+            dados['user'+ $scope.superheroid]['password'] = $scope.superheroAlias;
+            
+            
+            $http.post('http://127.0.0.1:3000/listusers/', dados)
             .then(function() {console.log('success');})   // success
             .catch(function() {console.log('error');});
+        }
 
     }
 
