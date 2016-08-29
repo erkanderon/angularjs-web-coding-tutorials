@@ -1,53 +1,60 @@
-<h3>Rest partial</h3>
+  
 
+  <div class="container">
+      <h3 align="center">Rest partial</h3>
+      <div ng-controller="restCtrl" ng-repeat="user in greeting" class="col-md-4 col-md-3">
+    	   <hr>
+        <p>Name: {{user.name}}</p>
+        <p>Password: {{user.password}}</p>
+        <p>Profession: {{user.profession}}</p>
+        <p>ID: {{user.ID}}</p>
+      </div>
+  </div>
 
-<div ng-controller="restCtrl" ng-repeat="user in greeting">
-	<hr>
-    <p>Name: {{user.name}}</p>
-    <p>Password: {{user.password}}</p>
-    <p>Profession: {{user.profession}}</p>
-    <p>ID: {{user.id}}</p>
-</div>
+  <hr>
+  <div class="container">
+      <div class="col-md-6 col-md-offset-3">
 
-<hr>
-<div class="container">
-    <div class="col-md-6 col-md-offset-3">
+    <!-- PAGE TITLE -->
+          <div class="page-header">
+                <h1><span class="glyphicon glyphicon-tower"></span> Submitting Forms with Angular</h1>
+          </div>
 
-  <!-- PAGE TITLE -->
-        <div class="page-header">
-              <h1><span class="glyphicon glyphicon-tower"></span> Submitting Forms with Angular</h1>
-        </div>
+    <!-- SHOW ERROR/SUCCESS MESSAGES -->
+          <div id="messages"></div>
 
-  <!-- SHOW ERROR/SUCCESS MESSAGES -->
-        <div id="messages"></div>
+    <!-- FORM -->
+    <form ng-submit="postData()" action="#!/rest">
+      <!-- NAME -->
+      <div id="user-group" class="form-group">
+        <label>Name</label>
+        <input type="text" name="name" ng-model='name' class="form-control" placeholder="Type Name">
+        <span class="help-block"></span>
+      </div>
 
-  <!-- FORM -->
-  <form ng-submit="postData()">
-    <!-- NAME -->
-    <div id="name-group" class="form-group">
-      <label>Name</label>
-      <input type="text" name="name" ng-model='name' class="form-control" placeholder="Bruce Wayne">
-      <span class="help-block"></span>
-    </div>
+      <!-- SUPERHERO NAME -->
+      <div id="user-group" class="form-group">
+        <label>Password</label>
+        <input type="text" name="pass" ng-model='password' class="form-control" placeholder="Type Password">
+        <span class="help-block"></span>
+      </div>
+      <div id="user-group" class="form-group">
+        <label>Profession</label>
+        <input type="text" name="profession" ng-model='profession' class="form-control" placeholder="Profession">
+        <span class="help-block"></span>
+      </div>
 
-    <!-- SUPERHERO NAME -->
-    <div id="superhero-group" class="form-group">
-      <label>Superhero Alias</label>
-      <input type="text" name="superheroAlias" ng-model='superheroAlias' class="form-control" placeholder="Caped Crusader">
-      <span class="help-block"></span>
-    </div>
+      <div id="user-group" class="form-group">
+        <label>ID</label>
+        <input type="text" name="id" ng-model='userid' class="form-control" placeholder="ID">
+        <span class="help-block"></span>
+      </div>
 
-    <div id="superhero-group" class="form-group">
-      <label>Superhero Id</label>
-      <input type="text" name="superheroid" ng-model='superheroid' class="form-control" placeholder="id">
-      <span class="help-block"></span>
-    </div>
+      <!-- SUBMIT BUTTON -->
+      <button type="submit" class="btn btn-success btn-lg btn-block">
+        <span class="glyphicon glyphicon-flash"></span> Submit!
+      </button>
+    </form>
 
-    <!-- SUBMIT BUTTON -->
-    <button type="submit" class="btn btn-success btn-lg btn-block">
-      <span class="glyphicon glyphicon-flash"></span> Submit!
-    </button>
-  </form>
-
-</div>
-</div>
+  </div>
+  </div>

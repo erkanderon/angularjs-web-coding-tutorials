@@ -32,10 +32,12 @@ angular.module('restTutorial', ['ngRoute'])
             var dados = {};
             console.log($scope.name);
             console.log($scope.superheroAlias);
-            console.log('user'+ $scope.superheroid);
-            dados['user'+ $scope.superheroid] = {};
-            dados['user'+ $scope.superheroid]['name'] = $scope.name;
-            dados['user'+ $scope.superheroid]['password'] = $scope.superheroAlias;
+            console.log('user'+ $scope.userid);
+            dados['user'+ $scope.userid] = {};
+            dados['user'+ $scope.userid]['name'] = $scope.name;
+            dados['user'+ $scope.userid]['password'] = $scope.password;
+            dados['user'+ $scope.userid]['profession'] = $scope.profession;
+            dados['user'+ $scope.userid]['ID'] = $scope.userid;
             
             
             $http.post('http://127.0.0.1:3000/listusers/', dados)
