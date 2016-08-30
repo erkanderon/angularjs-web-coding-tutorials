@@ -6,10 +6,18 @@ angular.module('myApp', [
   'myApp.view1',
   'myApp.view2',
   'myApp.version',
-  'restTutorial'
+  'restTutorial',
+  'calculator',
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');
 
-  $routeProvider.otherwise({redirectTo: '/view1'});
+  $routeProvider
+
+  .when('/calculator', {
+            templateUrl: 'calculator/calculator-template.html',
+            controller: 'calcCtrl'
+        })
+  
+  .otherwise({redirectTo: '/view1'});
 }]);
