@@ -6,39 +6,39 @@
     </div>
     <div id='entrybox' class='text-right'>
       <div id='entry'>
-        <p id='answer'>0</p>
+        <p ng-model="ans" id='answer'>{{ans}}</p>
       </div>
-      <div id='history'>
-        <p>0</p>
+      <div ng-model="history" id='history'>
+        <p>{{history}}</p>
       </div>
     </div>
     <!-- BUTTONS -->
     <div id='buttons'>
 
-      <button class='red buttonCalculator' value='ac'>AC</button>
-      <button class='red buttonCalculator' value='ce'>CE</button>
-      <button class="buttonCalculator" value='/'>&divide;</button>
-      <button class="buttonCalculator" value='*'>x</button>
+      <button ng-click = "allClear()" class='red buttonCalculator' value='ac'>AC</button>
+      <button ng-click = "clearCurrent()" class='red buttonCalculator' value='ce'>CE</button>
+      <button ng-click="operandClicked('/')" class="buttonCalculator" value='/'>&divide;</button>
+      <button ng-click="operandClicked('*')" class="buttonCalculator" value='*'>x</button>
 
-      <button class="buttonCalculator" value='7'>7</button>
-      <button class="buttonCalculator" value='8'>8</button>
-      <button class="buttonCalculator" value='9'>9</button>
-      <button class="buttonCalculator" value='-'>-</button>
+      <button ng-click="numberClicked(1)" class="buttonCalculator" value='1'>1</button>
+      <button ng-click="numberClicked(2)" class="buttonCalculator" value='2'>2</button>
+      <button ng-click="numberClicked(3)" class="buttonCalculator" value='3'>3</button>
+      <button ng-click="operandClicked('-')" class="buttonCalculator" value='-'>-</button>
 
-      <button class="buttonCalculator" value='4'>4</button>
-      <button class="buttonCalculator" value='5'>5</button>
-      <button class="buttonCalculator" value='6'>6</button>
-      <button class="buttonCalculator" value='+'>+</button>
+      <button ng-click="numberClicked(4)" class="buttonCalculator" value='4'>4</button>
+      <button ng-click="numberClicked(5)" class="buttonCalculator" value='5'>5</button>
+      <button ng-click="numberClicked(6)" class="buttonCalculator" value='6'>6</button>
+      <button ng-click="operandClicked('+')" class="buttonCalculator" value='+'>+</button>
 
 
-      <button class="buttonCalculator" value='1'>1</button>
-      <button class="buttonCalculator" value='2'>2</button>
-      <button class="buttonCalculator" value='3'>3</button>
+      <button ng-click="numberClicked(7)" class="buttonCalculator" value='7'>7</button>
+      <button ng-click="numberClicked(8)" class="buttonCalculator" value='8'>8</button>
+      <button ng-click="numberClicked(9)" class="buttonCalculator" value='9'>9</button>
       <button class='invisible buttonCalculator'>N</button>
 
-      <button class="buttonCalculator" id='zeroButton' value='0'>0</button>
+      <button ng-model="ans" ng-click = "numberClicked(0)" class="buttonCalculator" id='zeroButton' value='0'>0</button>
       <button class="buttonCalculator" value='.'>.</button>
-      <button class="buttonCalculator" id='equalButton' value='='>=</button>
+      <button ng-click="equalEnter()" class="buttonCalculator" id='equalButton' value='='>=</button>
 
     </div>
     <!-- end buttons -->
@@ -48,3 +48,10 @@
   </div>
   <!-- end container -->
 </div>  
+<footer id="footerid" class="text-center">
+  <div class="container">
+    Coded by
+    <a class="ahref" href="https://github.com/erkanderon" target="_blank">
+        Erkan Cetinkaya</a>
+  </div>
+</footer>
