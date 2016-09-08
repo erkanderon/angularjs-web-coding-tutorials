@@ -1,0 +1,50 @@
+<div class="container">
+	<div class="col-md-6 col-sm-4 clearDiv">
+		<div class="text-center"><h3>Prime Numbers</h3>
+
+				<div class="input-group">
+					<span class="input-group-addon" id="basic-addon2">Type Number</span>
+  					<input type="text" class="form-control" placeholder="Prime Numbers" ng-model="primesValue" ng-change="getPrimes(primesValue)" aria-describedby="basic-addon2">
+  			
+				</div>
+				<h6>{{primes}}</h6>
+
+		</div>
+	</div>
+	<div class="col-md-6 col-sm-4 clearDiv">
+		<div class="text-center"><h3>Fibonacci Series</h3>
+
+				<div class="input-group">
+					<span class="input-group-addon" id="basic-addon2">Type Number</span>
+  					<input type="text" class="form-control" placeholder="Fibonacci Numbers" ng-model="fibValue" ng-change="getFib(fibValue)" aria-describedby="basic-addon2">
+  			
+				</div>
+				<h6>{{fib}}</h6>
+
+		</div>
+	</div>
+	<div class="col-md-6 col-sm-4 clearDiv">
+		<div class="text-center"><h3>Sum of 0 to Value</h3>
+
+				<div class="input-group">
+					<span class="input-group-addon" id="basic-addon2">Type Number</span>
+  					<input type="text" class="form-control" placeholder="Number" ng-model="sumValue" ng-change="getSum(sumValue)" aria-describedby="basic-addon2">
+  			
+				</div>
+				<h6>{{sum}}</h6>
+
+		</div>
+	</div>
+	<div class="col-md-6 col-sm-4 clearDiv">
+		<div class="text-center"><h3>Reverse String</h3>
+
+				<div class="input-group">
+					<span class="input-group-addon" id="basic-addon2">Type String</span>
+  					<input type="text" class="form-control" placeholder="String" ng-model="rev" ng-change="reverseString(rev)" aria-describedby="basic-addon2">
+  					
+				</div>
+				<h6>{{reversed}}</h6>
+
+		</div>
+	</div>
+</div>

@@ -8,6 +8,7 @@ angular.module('myApp', [
   'myApp.version',
   'restTutorial',
   'calculator',
+  'algorithms',
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');
@@ -17,6 +18,10 @@ config(['$locationProvider', '$routeProvider', function($locationProvider, $rout
   .when('/calculator', {
             templateUrl: 'calculator/calculator-template.html',
             controller: 'calcCtrl'
+        })
+  .when('/algorithms', {
+            templateUrl: 'algorithms/algorithms-template.html',
+            controller: 'algoCtrl'
         })
   
   .otherwise({redirectTo: '/view1'});
