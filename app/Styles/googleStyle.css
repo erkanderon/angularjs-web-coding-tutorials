@@ -1,0 +1,90 @@
+.topB .middleEarth .foot {
+
+	font-family: arial,sans-serif;
+}
+.topB{
+	width: 100%;
+	height: 60px;
+}
+.topBar{
+
+	float: right;
+	padding-right: 20px;
+	color: #666;
+}
+.topBar div{
+  display: inline;
+  margin-left: 1em;
+}
+.topBar img {
+  vertical-align: middle;
+}
+.topBar button {
+  padding: 0.5em 1em 0.5em 1em;
+  border: 1px solid #4387fd;
+  border-radius: 2px;
+  background-color: #4387fd;
+  color: white;
+  font-weight: bold;
+}
+.topB a {
+  text-decoration: none;
+  color: inherit;
+}
+.foot a{
+	text-decoration: none;
+  color: inherit;
+}
+
+.middleEarth{
+
+	margin-top: 100px;
+	text-align: center;
+}
+.inputstyle{
+	margin-top: 50px;
+	text-align: center;
+
+}
+.inputstyle2{
+	width: 638px;
+	height: 40px;
+}
+.middleEarth div button{
+	background-color: #f2f2f2;
+	margin: 30px 4px;
+	padding: 10px;
+	border: 1px solid #f2f2f2;
+	border-radius: 2px;
+    color: #757575;
+    font-size: 13px;
+    font-weight: bold;
+}
+.foot{
+   position:fixed;
+   left:0px;
+   bottom:0px;
+   height:30px;
+   width:100%;
+   display: inline;
+   color: #666;
+   
+}
+.foot .bot{
+	float:left;
+}
+.foot .bot div{
+	padding: 0px 0px 0px 20px;
+	font-size: 15px;
+	font-family: Arial;
+	display: inline;
+}
+.foot .rightbot{
+	float: right;
+}
+.foot .rightbot div{
+	display: inline;
+	font-size: 15px;
+	font-family: Arial;
+	padding: 0px 20px 0px 0px;
+}

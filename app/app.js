@@ -23,6 +23,10 @@ config(['$locationProvider', '$routeProvider', function($locationProvider, $rout
             templateUrl: 'algorithms/algorithms-template.html',
             controller: 'algoCtrl'
         })
+  .when('/google', {
+            templateUrl: 'Templates/google-Template.html',
+            
+        })
   
   .otherwise({redirectTo: '/view1'});
 }]);
