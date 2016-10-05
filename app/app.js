@@ -27,6 +27,10 @@ config(['$locationProvider', '$routeProvider', function($locationProvider, $rout
             templateUrl: 'Templates/google-Template.html',
             
         })
+  .when('/bike', {
+            templateUrl: 'Templates/bike-shop.html',
+            
+        })
   
   .otherwise({redirectTo: '/view1'});
 }]);
